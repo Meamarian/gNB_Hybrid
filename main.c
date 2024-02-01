@@ -1412,6 +1412,7 @@ main(int argc, char **argv)
 	nb_mbufs = RTE_MAX(nb_ports * (nb_rxd + nb_txd + MAX_PKT_BURST +
 		nb_lcores * MEMPOOL_CACHE_SIZE), 8192U);
 
+    //nb_mbufs = 1024U * 1024U * 1U - 1;	
     nb_mbufs = 1024U * 439U * 1U - 1;
     // nb_mbufs = 8192U;
     RTE_LOG(INFO, L2FWD,"nb_mbufs: %u",nb_mbufs);
